@@ -39,8 +39,8 @@
             </div>
         </div>
 
-
-        <div id="myCards" class="col-lg-12 text-center">
+	<div class="container-fluid">	
+        <div id="myCards" class="col-sm-12 text-center">
 
             <div class="card">
                 <div class="card-header">
@@ -55,7 +55,7 @@
 
 
                     <form role="form" class="form-inline">
-
+				
                         <div class="input-group">
                             <label class="control-label" for="vp">Valor inicial:</label>
                             <input type="number" class="form-control" id="vp" value="1000">
@@ -89,8 +89,11 @@
 
 
 
-
-                        <button onClick="calcularVf()" type="button" class="btn btn-primary">Calcular</button>
+					<div class="input-group">
+						<span class="input-group-btn">
+							<button onClick="calcularVf()" type="button" class="btn btn-primary">Calcular</button>
+						</span>
+					</div>
                     </form>
                     <h4 id="vf">
 
@@ -144,8 +147,13 @@
                                 <option>meses</option>
                             </select>
                         </div>
+						<div class="input-group">
+						      <span class="input-group-btn">
 
-                        <button onClick="calcularVfMultiPmt()" type="button" class="btn btn-primary">Calcular</button>
+								<button onClick="calcularVfMultiPmt()" type="button" class="btn btn-primary">Calcular</button>
+						      </span>
+
+						</div>
                     </form>
                     <h4 id="vf2">
 
@@ -212,7 +220,7 @@
                 </div>
             </div> -->
         </div>
-
+		</div>
     </div>
 
 

@@ -3,6 +3,7 @@ function calcularVf() {
     vp = document.getElementById('vp').value;
     i = document.getElementById('taxa').value;
     n = document.getElementById('periodo').value;
+	periodo = n;
     tN = document.getElementById('tipoPeriodo').value;
     if (tN == 'anos') {
         //  document.write(tN);
@@ -31,9 +32,12 @@ function calcularVf() {
     }
 
     var ctx = document.getElementById("myChart");
-
+	var tipo = 'bar';
+	if(n>12){ 
+		tipo = 'line';
+	}
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: tipo,
         data: {
             labels: labels,
             datasets: [{
@@ -57,13 +61,8 @@ function calcularVf() {
             }]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
+
+         
         }
     });
     //  vf = vp * (1+ (i/100))^n
@@ -102,9 +101,12 @@ function calcularVfMultiPmt() {
     }
 
     var ctx = document.getElementById("myChart2");
-
+	var tipo = 'bar';
+	if(n>12){ 
+		tipo = 'line';
+	}
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: tipo,
         data: {
             labels: labels,
             datasets: [{
@@ -128,19 +130,10 @@ function calcularVfMultiPmt() {
             }]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
+		
+            
         }
     });
-}
-
-function calcularRendaMensal() {
-
 }
 
 function calcVF(vp, i, n) {
